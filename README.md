@@ -1,16 +1,45 @@
-# Real time top 10 Cryptocurrency price and 24h %  price change!
+# Crypto Realtime Tracker 🚀
 
-    #### Video Demo:  https://www.youtube.com/watch?v=0USU9M6lMxA
+A Flask web application that displays real-time prices and 24-hour percentage changes for the top 10 cryptocurrencies. This project was developed as a final project following Harvard's CS50 course, demonstrating API integration, data parsing, and dynamic web presentation.
 
-    #### Description:
-        Hello everyone, for my final project i coded a real time cryptocurrency price and 24h %  price change from coinmarketcap's data.
-        My program is separated into 4 different functions inluding main. To begin with, as the user starts the program my main function calls
-        the check_currency function. In my check_currency function the first think it does is to prompt the user for input. It asks the user for what
-        currency they would like the data to be printed and gives the user th option to choose between USD or EUR. If the user writes either of the 2 options
-        the program continues working. However if the user does not provide either of those 2 currencies, the program prints a message to the user saying that
-        the currency they have chosen is not supported, and then prompts the user again for input between the two choises again. If the user does not provide again the program will continue to print the error message and prompt the user again and again until he writes the correct input.
-        This is a defensive mechanism of the program so it does not allow the user to write whatever he wants as input. It stricly makes him write the currency in all capital letters as all currencies are written in capital letters.If the user successfully writes the correct input the program will print him a
-        table with the top 10 cryptocurrencies at the moment in the market, with their respective prices and respective 24h% changes in their prices. The
-        result will be different depending on what the user wrote as input. The check_currency function will return the input into the main function and then in the if statement it will call the next function to use. If the user typed USD then the usd_currency will be called. If the user typed EUR then the eur_currency will be called.The numbers for USD and EUR are different. So this all works using the requests library and making a requests on coinmarketcaps server. The coinmarketcap data has a specific documentation on how to to get the data in which you can check in they webpage too.
-        These next lines of code are all from the documentation. They store in a variable called url the data from the coinmarketcap. Then they have some parameters that pass with request pointing to start from the first cryptocurrency and limit it to the first ten and change the prices to USD. The headers has some necessary coding lines for the request including the apikey that we get from coinmarketcaps page. However right here i am not using the key directly into the program. I have made a different file called "apikey.py" that stores they key in a variable and then im importing that file into my main project file. The reason i coded it like that is because after some research i found out that it is not the best idea to import it directly into the main program as it can cause different problems and errors, and for safety reasons too. After that we send a get request using the server with the specific parameters and headers and the information we retrieve we convert it into json format. Then in a varibale called coins we get the data from the json response. I then create an empty list called table_data that im gonna use later to print the results. I then use a loop iterating each coin from start to finish and getting the specific information i want which is the name, the price, and the 24h% change in real time and then i append them in the empty list i created. To finish i use the tabulate module to format and print the results in table. Im using the "grid" tableformat for how the table looks because tabulate module has a lot of formats to use. And im also using the numalign to align the numbers at the center. If we do not use this the number are goona be centered in the . and it looks weird when some numbers are really big and some numbers are really small. This is for a better view for the user. The eur_currency fuctions does exactly the same things as the usd_currency but it just taked the prices for EUR instead of USD.To finalizize im running some tests in my test_project file to make sure that my function are working as they should. That is all for Final Project of CS50 Introduction to programming with Python. I hope you like how i coded my vision for this program. I got inspired from an exercise we did in this course using bitcoin and because i am a fan of the market i tried take my creativity in this project. Thank you everyone!
+---
+
+## Features
+
+- Real-time fetching of cryptocurrency prices via a public API  
+- Displays the top 10 cryptocurrencies by market cap  
+- Shows price, 24h % change, and last updated time  
+- Clean and responsive web interface using Flask and Jinja2 templates  
+
+---
+
+## Technologies Used
+
+- Python 3  
+- Flask  
+- Requests (for HTTP API calls)  
+- Jinja2 (templating engine)  
+- HTML/CSS (for frontend)  
+
+---
+
+## Setup and Installation
+
+### Prerequisites
+
+- Python 3.x installed  
+- `pip` package manager  
+- An API key from the crypto data provider (if required)
+
+### Installation steps
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/kostasro/cs50-crypto-realtime-tracker.git
+cd cs50-crypto-realtime-tracker
+
+## 📺 Demo Video / How It Works
+
+[Watch the explanatory video on YouTube](https://www.youtube.com/watch?v=0USU9M6lMxA)
 
