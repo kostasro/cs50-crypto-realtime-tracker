@@ -1,4 +1,4 @@
-# Crypto Realtime Tracker 🚀
+# Crypto Realtime Tracker 
 
 A Flask web application that displays real-time prices and 24-hour percentage changes for the top 10 cryptocurrencies. This project was developed as a final project following Harvard's CS50 course, demonstrating API integration, data parsing, and dynamic web presentation.
 
@@ -31,15 +31,6 @@ A Flask web application that displays real-time prices and 24-hour percentage ch
 - `pip` package manager  
 - An API key from the crypto data provider (if required)
 
-### Installation steps
-
-1. Clone this repository:
-
-```bash
-git clone https://github.com/kostasro/cs50-crypto-realtime-tracker.git
-cd cs50-crypto-realtime-tracker
-
 ## 📺 Demo Video / How It Works
 
 [Watch the explanatory video on YouTube](https://www.youtube.com/watch?v=0USU9M6lMxA)
-
