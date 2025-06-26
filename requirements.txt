@@ -1,0 +1,15 @@
+# Required libraries for my project!
+
+
+# requests library
+
+# we use this library to make an HTTP request
+
+# tabulate library
+
+# we use this library to print the results we have in a table format using the "grid" table format at this specific example
+
+# we also have a separate file named "apikey" that contains the api key from coinmarketcaps page. I decided to make a different file for the key because
+# i read that it is not a good idea to put the key directly inside your main file. so we import the file into the project file and we use api_key to access it.
+# to get an api key from coinmarketcaps page you need to make an account in their page first!
+
